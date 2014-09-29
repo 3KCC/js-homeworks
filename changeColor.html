@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>changeColor example</title>
+<script>
+function changeColor() {
+	var cs = document.defaultView.getComputedStyle(document.body,null);
+	var bg = cs.getPropertyValue('background-color');
+	switch (bg) {
+		case "rgb(0, 0, 0)":
+			document.body.style.background = "rgb(8, 0, 0)";
+			break;
+		case "rgb(8, 0, 0)":
+			document.body.style.background = "rgb(16, 0, 0)";
+			break;
+		case "rgb(16, 0, 0)":
+			document.body.style.background = "rgb(24, 0, 0)";
+			break;
+		case "rgb(24, 0, 0)":
+			document.body.style.background = "rgb(32, 0, 0)";
+			break;
+		case "rgb(32, 0, 0)":
+			document.body.style.background = 'rgb(40, 0, 0)';
+			break;
+		case "rgb(40, 0, 0)":
+			document.body.style.background = 'rgb(48, 0, 0)';
+			break;
+		case "rgb(48, 0, 0)":
+			document.body.style.background = 'rgb(56, 0, 0)';
+			break;
+		case "rgb(56, 0, 0)":
+			document.body.style.background = 'rgb(64, 0, 0)';
+			break;
+		case "rgb(64, 0, 0)":
+			document.body.style.background = 'rgb(72, 0, 0)';
+			break;
+		case "rgb(72, 0, 0)":
+			document.body.style.background = 'rgb(80, 0, 0)';
+			break;
+		case "rgb(80, 0, 0)":
+			document.body.style.background = 'rgb(88, 0, 0)';
+			break;
+		case "rgb(88, 0, 0)":
+			document.body.style.background = 'rgb(96, 0, 0)';
+			break;
+		case "rgb(96, 0, 0)":
+			document.body.style.background = 'rgb(104, 0, 0)';
+			break;
+		case "rgb(104, 0, 0)":
+			document.body.style.background = 'rgb(112, 0, 0)';
+			alert("TA DA!");
+			break;
+		default:
+			document.body.style.background = "rgb(0, 0, 0)";
+	}
+}
+</script>
+</head>
+
+<body>
+  <button onclick="changeColor();">Click ME!</button>
+  <hr />
+</body>
+</html>
