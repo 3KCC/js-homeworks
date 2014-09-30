@@ -1,0 +1,19 @@
+JavaScript resources
+
+http://www.impressivewebs.com/javascript-string-methods-reference/
+http://www.javascriptkit.com/jsref/escapesequence.shtml
+http://appcropolis.com/blog/web-technology/organize-html-css-javascript-files/
+http://eloquentjavascript.net/
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+http://jsfiddle.net/
+http://dailyjs.com/
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures
+http://javascriptweblog.wordpress.com/2010/06/07/understanding-javascript-prototypes/
+http://eloquentjavascript.net/chapter8.html
+
+http://www.thinkful.com/learn/javascript-best-practices-1/
+flippinawesome.org/2013/12/23/45-useful-javascript-tips-tricks-and-best-practices/
+http://javascript.crockford.com/code.html
+http://jstherightway.org/
+https://www.inkling.com/read/javascript-definitive-guide-david-flanagan-6th/chapter-3/numbers

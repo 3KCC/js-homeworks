@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>colorTheCanvas</title>
+	</head>
+	<body>
+		<h1 align="center">Let's color the canvas!</h1>
+		<div name="colorTable" style="top: 100px; left: 400px; position: absolute">
+			<table>
+			<tr><td id="red" style="height: 35px; width: 35px; background-color: red; border: 2px solid black" onclick="getColor(this);"></td></tr>
+			<tr><td id="blue" style="height: 35px; width: 35px; background-color: blue; border: 2px solid black" onclick="getColor(this);"></td></tr>
+			<tr><td id="green" style="height: 35px; width: 35px; background-color: green; border: 2px solid black" onclick="getColor(this);"></td></tr>
+			<tr><td id="yellow" style="height: 35px; width: 35px; background-color: yellow; border: 2px solid black" onclick="getColor(this);"></td></tr>
+			<tr><td id="white" style="height: 35px; width: 35px; background-color: white; border: 2px solid black" onclick="getColor(this);"></td></tr>	
+			</table>
+		</div>
+		<div name="workingSpace" align="center" width="80%">
+			<table style="cellspacing: 0; border-collapse: collapse">
+				<tr>
+					<td id="row1_box1" style="height: 50px; width: 100px; border: 2px solid black" onclick="putColor(this);"></td>
+					<td id="row1_box2" style="height: 50px; width: 150px; background-color: white; border: 2px solid black" onclick="putColor(this);"></td>
+					<td id="row1_box3" style="height: 50px; width: 50px; background-color: blue; border: 2px solid black" onclick="putColor(this);"></td>
+					<td id="row1_box4" style="height: 50px; width: 50px; background-color: white; border: 2px solid black" onclick="putColor(this);"></td>
+				</tr>
+				<tr>
+					<td id="row2_box1" id="row1_box2" style="height: 100px; width: 100px; background-color: white; border: 2px solid black" onclick="putColor(this);"></td>
+					<td id="row2_box2" style="height: 100px; width: 150px; background-color: green; border: 2px solid black" onclick="putColor(this);"></td>
+					<td id="row2_box3" style="height: 100px; width: 50px; background-color: white; border: 2px solid black" onclick="putColor(this);"></td>
+					<td id="row2_box4" style="height: 100px; width: 50px; background-color: yellow; border: 2px solid black" onclick="putColor(this);"></td>
+				</tr>
+				<tr>
+					<td id="row3_box1" style="height: 50px; width: 100px; background-color: blue; border: 2px solid black" onclick="putColor(this);"></td>
+					<td id="row3_box2" style="height: 50px; width: 150px; background-color: white; border: 2px solid black" onclick="putColor(this);"></td>
+					<td id="row3_box3" style="height: 50px; width: 50px; background-color: green; border: 2px solid black" onclick="putColor(this);"></td>
+					<td id="row3_box4" style="height: 50px; width: 50px; background-color: white; border: 2px solid black" onclick="putColor(this);"></td>
+				</tr>
+				<tr>
+					<td id="row4_box1" style="height: 100px; width: 100px; background-color: white; border: 2px solid black" onclick="putColor(this);"></td>
+					<td id="row4_box2" style="height: 100px; width: 150px; background-color: yellow; border: 2px solid black" onclick="putColor(this);"></td>
+					<td id="row4_box3" style="height: 100px; width: 50px; background-color: white; border: 2px solid black" onclick="putColor(this);"></td>
+					<td id="row4_box4" style="height: 100px; width: 50px; background-color: red; border: 2px solid black" onclick="putColor(this);"></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+	<script>
+	function getColor(ele) {
+		var e = document.getElementById(ele.id);
+		var cs = document.defaultView.getComputedStyle(e,null);
+		var bg = cs.getPropertyValue('background-color');
+		currentColor = bg;
+	}
+	var currentColor;
+	function putColor(ele){
+		var e = document.getElementById(ele.id);
+		e.style.background = currentColor;
+	}
+	</script>
+</html>
