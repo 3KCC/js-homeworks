@@ -1,0 +1,56 @@
+#Description, #Title{
+	width: 20%;
+	margin-left: 20%;
+	margin-top: 5%;
+	font-family: inherit;
+}
+
+#Title{
+	font-weight: bold;
+	font-size: 200%;
+}
+
+#Description{
+	font-size: 150%;
+}
+#bouncing_area{
+	position: absolute;
+	top: 5%;
+	right: 30%;
+	bottom: 15%;
+	background-color: rgba(231, 240, 240, 1);
+	height: 80%;
+	width: 10%;
+}
+#notice {
+	font-size: 120%;
+	margin-left: 12%;
+	margin-top: 200%;
+	display: none;
+}
+#ball{
+	background-color: #329999;
+	border-radius: 100%;
+	height: 20%;
+	width: 75%;
+	margin-left: 12%;
+	margin-top: 120%;
+}
+
+@-moz-keyframes example {
+	0%   {margin-top: 0px;}
+    25%  {margin-top: 420px;}
+    50%  {margin-top: 0px;}
+    75%  {margin-top: 420px;}
+    100%  {margin-top: 0px;}
+}
+
+/* This is the element that we apply the animation to. */
+#ball {
+   -moz-animation-name: example;
+   -moz-animation-duration: 10s;
+   -moz-animation-timing-function: ease; /* ease is the default */
+   -moz-animation-delay: 0s;             /* 0 is the default */
+   -moz-animation-iteration-count: infinite;    /* 1 is the default */
+   -moz-animation-direction: normal;  /* normal is the default */
+}
