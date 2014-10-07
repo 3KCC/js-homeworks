@@ -1,0 +1,2 @@
+http://learn.jquery.com/about-jquery/how-jquery-works/
+http://www.impressivewebs.com/jquery-tutorial-for-beginners/
