@@ -1,4 +1,4 @@
-* {
+/** {
 	border: 1px solid red;
 }
 * {
@@ -12,6 +12,7 @@
 		background-color: blue;
 	}
 }
+*/
 .grid {
 	margin: 0 auto;
 	max-width: 1000px;
@@ -74,6 +75,10 @@ body {
 	color: #BCBBBB;
 	margin: 5em auto;
 }
+.drag {
+	position: relative;
+	margin-left: 1em;
+}
 #square, #circle, #left-triangle, #right-triangle {
 	height: 3em;
 	width: 3em;
@@ -101,7 +106,6 @@ body {
 	height: 3em;
 	width: 4em;
 	margin-bottom: 1em;
-	position: relative;
 }
 #rectangle{
 	background-color: #676690;
