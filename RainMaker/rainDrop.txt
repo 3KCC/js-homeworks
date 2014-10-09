@@ -1,1 +1,4 @@
 http://maroslaw.github.io/rainyday.js/demo1.html
+
+Dif Approach:
+http://www.findsourcecode.com/css/how-to-create-cloud-rain-animation-using-css-jquery/
