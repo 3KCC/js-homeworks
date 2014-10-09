@@ -75,8 +75,8 @@ function OnMouseMove(e)
     _dragElement.style.left = (_offsetX + e.clientX - _startX) + 'px';
     _dragElement.style.top = (_offsetY + e.clientY - _startY) + 'px';
     
-    _debug.innerHTML = '(' + _dragElement.style.left + ', ' + 
-        _dragElement.style.top + ')';   
+    //_debug.innerHTML = '(' + _dragElement.style.left + ', ' + 
+    //    _dragElement.style.top + ')';   
 }
 
 function OnMouseUp(e)
@@ -93,14 +93,14 @@ function OnMouseUp(e)
         // this is how we know we're not dragging      
         _dragElement = null;
         
-        _debug.innerHTML = 'mouse up';
+        //_debug.innerHTML = 'mouse up';
     }
 }
 
 function ExtractNumber(value)
 {
     var n = parseInt(value);
-	
+		
     return n == null || isNaN(n) ? 0 : n;
 }
 
