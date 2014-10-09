@@ -10,12 +10,13 @@ function randRange( minNum, maxNum) {
 function createRain(i) {
     if(i>0) {
         setTimeout(function(){
-            var dropLeft = randRange(535,780);
+            var dropLeft = randRange(560,800);
             $('#rain_container').append('<div class="drop" id="drop'+i+'"></div>');
             $('#drop'+i).css('left',dropLeft);
             i--;
             createRain(i);},150);
     }
 }
+
 // Make it rain
 createRain(nbDrop);
