@@ -1,5 +1,5 @@
 // number of drops created.
-var nbDrop = 500; 
+var nbDrop = 30; 
 
 // function to generate a random number range.
 function randRange( minNum, maxNum) {
