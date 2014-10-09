@@ -3,7 +3,7 @@ var _startY = 0;
 var _offsetX = 0;           // current element offset
 var _offsetY = 0;
 var _dragElement;           // needs to be passed from OnMouseDown to OnMouseMove
-var _oldZIndex = 0;         // we temporarily increase the z-index during drag
+var _oldZIndex = "0";         // we temporarily increase the z-index during drag
 //var _debug = $('debug');    // makes life easier
 var _instruct = $('instruction');
 
@@ -20,10 +20,10 @@ function OnMouseDown(e)
     // IE is retarded and doesn't pass the event object
     if (e == null) 
         e = window.event; 
-    
+
     // IE uses srcElement, others use target
     var target = e.target != null ? e.target : e.srcElement;
-    
+
     //_debug.innerHTML = target.className == 'drag' 
     //    ? 'draggable element clicked' 
     //    : 'NON-draggable element clicked';
@@ -44,8 +44,8 @@ function OnMouseDown(e)
         _offsetY = ExtractNumber(target.style.top);
         
         // bring the clicked element to the front while it is being dragged
-        _oldZIndex = target.style.zIndex;
-        target.style.zIndex = 10000;
+        //_oldZIndex = target.style.zIndex;
+        target.style.zIndex = maxZIndex();
         
         // we need to access the element in OnMouseMove
         _dragElement = target;
@@ -83,7 +83,7 @@ function OnMouseUp(e)
 {
     if (_dragElement != null)
     {
-        _dragElement.style.zIndex = _oldZIndex;
+        //_dragElement.style.zIndex = _oldZIndex;
 
         // we're done with these events until the next OnMouseDown
         document.onmousemove = null;
@@ -108,4 +108,18 @@ function ExtractNumber(value)
 function $(id)
 {
     return document.getElementById(id);
+}
+
+function maxZIndex()
+{
+    var elements = document.getElementsByClassName("drag");
+    var z = 0;
+    var eleZ; 
+    for (var i = 0; i < elements.length; i++) {
+        eleZ = elements[i].style.zIndex;
+        if(z <= eleZ) {
+            z++;
+        }
+    }
+    return z;
 }
