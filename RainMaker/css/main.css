@@ -1,0 +1,102 @@
+body {
+	background: rgba(19, 138, 121, 0.31);
+	overflow: hidden;
+}
+#cloud {
+	width: 22em;
+	height: 8em;
+
+	background: #f2f9fe;
+	background: linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -webkit-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -moz-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -ms-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -o-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+
+	position: relative;
+	margin: 10em auto 1em;
+	float: none;
+
+	border-radius: 10em;
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+}
+
+#cloud:before, #cloud:after {
+	content:'';
+	position: absolute;
+	background: #f2f9fe;
+	z-index: -1;
+}
+
+#cloud:before {
+	width:11em; height: 11em;
+	top: -6em; right: 3em;
+	
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+}
+
+#cloud:after {
+	width:6em; height: 6em;
+	top: -3em; left: 3em;
+	
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+}
+
+.shadow {
+	width: 22em;
+	position: absolute; bottom: -1em; 
+	background: #000;
+	z-index: -1;
+	
+	box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
+	
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+#rain_container {
+	width: 15em;
+	margin: auto;
+}
+.drop {
+	width: 0.75em;
+	height: 0.75em;
+
+	background: #105570;
+
+	position: absolute;
+	margin: -2em auto;
+	z-index: -1;
+
+	border-radius: 100% 0em 100% 100%;
+	-webkit-border-radius: 100% 0em 100% 100%;
+	-moz-border-radius: 100% 0em 100% 100%;
+
+	-ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+
+    -webkit-animation: fall 1s linear infinite;
+    -moz-animation: fall 1s linear infinite;
+    animation: fall 1s linear infinite;
+}
+
+
+/* animate the drops*/
+@-webkit-keyframes fall {
+	to {margin-top: 10em;}
+}
+@-moz-keyframes fall {
+	to {margin-top: 10em;}
+}
+}
+@keyframes fall {
+	to {margin-top: 10em;}
+}
