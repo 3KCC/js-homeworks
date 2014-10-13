@@ -36,8 +36,8 @@ body {
 }
 
 .head {
-    position: relative;
-    top: 6em;
+    position: absolute;
+    top: 12em;
     left: 14em;
     height: 150px;
     width: 180px;
@@ -80,20 +80,31 @@ body {
     transform: rotate(-5deg);
 }
 
-
+.frown {
+    position: relative;
+    bottom: -15px;
+    left: 2.5em;
+    height: 70px;
+    width: 80px;
+    border-top: 5px solid #1a1a1a;
+    border-radius: 50%;
+    transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+}
 
 .arm {
-    position: relative;
+    position: absolute;
     height: 3px;
     width: 4em;
     background-color: #1A1A1A;
 }
 
 .leg {
-    position: relative;
-    bottom: -9.5em;
+    position: absolute;
+    bottom: -40px;
     width: 3px;
-    height: 3em;
+    height: 50px;
     background-color: #1A1A1A;
     float: left;
 }
@@ -106,15 +117,15 @@ body {
 
 #arm-right {
     top: 50%;
-    right: -12.5em;
+    right: -4em;
     transform: rotate(-10deg);
 }
 
 #leg-left {
-    left: 3em;
+    left: 23%;
 }
 
 #leg-right {
-    right: -9em;
+    right: 21%;
     transform: rotate(-10deg);
 }
