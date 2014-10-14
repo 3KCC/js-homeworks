@@ -44,6 +44,7 @@ var dude = {
     		$('#health').text('Health: XXX');
     		$('#love').text('Love: XXX');
     		$('#happiness').text('Happiness: XXX');
+    		$('button').attr('disabled','disabled');
     	} else {
 			$('#health').text('Health: ' + this.health);
 			$('#love').text('Love: ' + this.love);
