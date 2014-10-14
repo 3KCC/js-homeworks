@@ -7,6 +7,10 @@ var dude = {
 		this.health += randomInt(2,4);
 		this.love -= randomInt(1,2);
 		this.happiness -= randomInt(1,2);
+		$('.mouth').addClass('feed');
+		setTimeout(function () {
+			$('.mouth').removeClass('feed');
+		}, 700);
 		this.updateStat();
 		this.styleDude();
 	},
@@ -15,6 +19,10 @@ var dude = {
 		this.health -= randomInt(1,2);
 		this.love += randomInt(2,4);
 		this.happiness -= randomInt(1,2);
+		$('.head').addClass('hug');
+		setTimeout(function () {
+			$('.head').removeClass('hug');
+		}, 700);
 		this.updateStat();
 		this.styleDude();
 	},
@@ -23,6 +31,10 @@ var dude = {
 		this.health -= randomInt(1,2);
 		this.love -= randomInt(1,2);
 		this.happiness += randomInt(2,4);
+		$('#dude_container').addClass('play');
+		setTimeout(function () {
+			$('#dude_container').removeClass('play');
+		}, 700);
 		this.updateStat();
 		this.styleDude();
 	},
@@ -41,11 +53,11 @@ var dude = {
 
 	styleDude: function() {
     	if (this.health >= 23) {
-    		$('.head').css({top: 100, left: 130, height:350, width:415});
+    		$('.head').css({top: 80, left: 90, height:350, width:415});
     	} else if (this.health >= 18) {
-    		$('.head').css({top: 150, left: 140, height:250, width:300});
+    		$('.head').css({top: 130, left: 140, height:250, width:300});
     	} else if (this.health >= 12) {
-    		$('.head').css({top: 150, left: 180, height:200, width:240});
+    		$('.head').css({top: 150, left: 170, height:200, width:240});
     	} else {
     		$('.head').css({top: '12em', left: '14em', height:150, width:180});
     	}
