@@ -46,9 +46,9 @@ var dude = {
     		$('#happiness').text('Happiness: XXX');
     		$('button').attr('disabled','disabled');
     	} else {
-			$('#health').text('Health: ' + this.health);
-			$('#love').text('Love: ' + this.love);
-			$('#happiness').text('Happiness: ' + this.happiness);
+		$('#health').text('Health: ' + this.health);
+		$('#love').text('Love: ' + this.love);
+		$('#happiness').text('Happiness: ' + this.happiness);
 		}
 	},
 
