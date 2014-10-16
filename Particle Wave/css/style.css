@@ -1,0 +1,51 @@
+body {
+	background-color: black;
+}
+.container {
+	height: 40em;
+	width: 60%;
+	margin-top: 3em;
+}
+.particles {
+	height: 1em;
+	width: 1em;
+	border-radius: 100%;
+	background-color: #808687;
+	margin: 0.5em;
+	float: left;
+	cursor: pointer;
+}
+
+.wave {
+	-webkit-animation: wave .4s linear;
+	-moz-animation: wave .4s linear;
+	-ms-animation: wave .4s linear;
+	-o-animation: wave .4s linear;
+	animation: wave .4s linear;
+}
+
+@-webkit-keyframes wave {
+	0% { -webkit-transform: translateY(0); background-color: #808687;}
+	50% { -webkit-transform: translateY(-15px); background-color: #f700ff;}
+	100% { -webkit-transform: translateY(0); background-color: #808687;}
+}
+@-moz-keyframes wave {
+	0% { -moz-transform: translateY(0); background-color: #808687;}
+	50% { -moz-transform: translateY(-15px); background-color: #f700ff;}
+	100% { -moz-transform: translateY(0); background-color: #808687;}
+}
+@-ms-keyframes wave {
+	0% { -ms-transform: translateY(0); background-color: #808687;}
+	50% { -ms-transform: translateY(-15px); background-color: #f700ff;}
+	100% { -ms-transform: translateY(0); background-color: #808687;}
+}
+@-o-keyframes wave {
+	0% { -o-transform: translateY(0); background-color: #808687;}
+	50% { -o-transform: translateY(-15px); background-color: #f700ff;}
+	100% { -o-transform: translateY(0); background-color: #808687;}
+}
+@keyframes wave {
+	0% { transform: translateY(0); background-color: #808687;}
+	50% { transform: translateY(-15px); background-color: #f700ff;}
+	100% { transform: translateY(0); background-color: #808687;}
+}
