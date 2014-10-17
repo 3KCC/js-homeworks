@@ -4,7 +4,7 @@ function createParticle() {
 	var myParticles = [];
 	var container = $( ".container" );
 	for ( var i = 0; i < numOfPars; i++ ) {
-		myParticles.push('<div class="particles" id="p' + i +'"></div>');
+		myParticles.push('<div class="particles" id="p' + i +'" ></div>');
 	}
 	container.append( myParticles.join( "" ) );
 }
@@ -32,7 +32,6 @@ function makeWave(pos) {
 
 function waving(event) {
 	var id = $(this).attr('id');
-	alert(id);
 	$(this).off('click');
 	makeWave(getPosition(id));
 }
@@ -44,4 +43,5 @@ function getPosition(id) {
 //used $( document ).ready( handler ) to ensure element is selected after DOM is ready
 $(function(){
     createParticle();
+    $(".particles").on('click', waving);
 });
