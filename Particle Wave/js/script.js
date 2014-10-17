@@ -23,10 +23,7 @@ function makeWave(pos) {
 		$('#p' + (pos + 28)).trigger('click');
 	},50);
 	setTimeout(function () {
-		$('#p' + pos).on('click', function (event) {
-			$(this).off('click');
-			makeFlip(pos);
-		});
+		$('#p' + pos).on('click', waving);
 	}, 800);
 }
 
