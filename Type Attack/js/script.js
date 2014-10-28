@@ -9,7 +9,7 @@ $(function (){
     var correct = 0, wrong = 0, missed = 0; 
 
     var chars = [];
-    var increment = 1; //for increasing speed
+    var increment = 100; //for increasing speed
 
     // styling the drawing objects in canvas
     context.font = "40px Century Gothic";
@@ -55,6 +55,7 @@ $(function (){
             //missed <= 20, continue creating more chars, old chars move to new y
             if (missed > 20) {
                 context.clearRect(0,0,w,h);
+                gameover();
             } else {
                 setTimeout(drawing, 20);
             }
@@ -63,6 +64,24 @@ $(function (){
     //update statistics according to id and new score
     function updateStat(id, score){
         $('#' + id).text(id + ': ' + score);
+    }
+
+    //showing gameover modals
+    function gameover() {
+        var decimal = (correct / (correct + wrong + missed)*100);
+        var percent = Math.round((decimal)*Math.pow(10,2))/Math.pow(10,2)
+        var gameover = $( "<div>", {
+            "class": "gameover",
+            })
+        gameover.appendTo('body');
+        gameover.insertAfter('.begin');
+        $('<h1>Game Over</h1>').appendTo('.gameover');
+        $('<h2 class="score">' + percent + '%</h2>').appendTo('.gameover');
+        if (wrong == 1) {
+            $('<h2>You got ' + correct + ' right with ' + wrong + ' error.</h2>').appendTo('.gameover');
+        } else {
+            $('<h2>You got ' + correct + ' right with ' + wrong + ' errors.</h2>').appendTo('.gameover');
+            }
     }
 
     setTimeout(function () {

@@ -4,7 +4,7 @@ body {
 }
 /*it takes the 'full view' when you let it position = 0 and set back-ground color.
 The other elements are behind it.*/
-.begin {
+.begin, .gameover {
 	position: absolute;
 	top: 0;
 	bottom: 0;
