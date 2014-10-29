@@ -1,6 +1,7 @@
 body {
 	background-color: #FBFBFB;
 	text-align: center;
+	font-family: 'Century Gothic';
 }
 /*it takes the 'full view' when you let it position = 0 and set back-ground color.
 The other elements are behind it.*/
@@ -21,6 +22,24 @@ h1 {
 h2 {
 	font-size: 20px;
 	margin: 20px 0;
+}
+
+.score {
+	font-size: 46px;
+	font-weight: bold;
+	margin-top: -30px;
+	margin-bottom: 40px;
+}
+
+a {
+	color: #27a577;
+	text-decoration: none;
+}
+a:visited {
+	color: #27a577;
+}
+a:hover {
+	color: #31ce95;
 }
 
 /*use the full view of browser, vh: view heigth, vw: view width*/

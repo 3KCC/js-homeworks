@@ -68,8 +68,8 @@ $(function (){
 
     //showing gameover modals
     function gameover() {
-        var decimal = (correct / (correct + wrong + missed)*100);
-        var percent = Math.round((decimal)*Math.pow(10,2))/Math.pow(10,2)
+        var decimal = (correct / (correct + wrong + missed)*100); //missed always > 0
+        var percent = Math.round((decimal)*Math.pow(10,2))/Math.pow(10,2) //keep the value of the first 4 digit with rounding then take %
         var gameover = $( "<div>", {
             "class": "gameover",
             })
@@ -82,6 +82,7 @@ $(function (){
         } else {
             $('<h2>You got ' + correct + ' right with ' + wrong + ' errors.</h2>').appendTo('.gameover');
             }
+        $('<a href="file:///C:/Users/MinhTrang-EZFX/Desktop/UI/Type%20Attack/index.html">Try Again?</a>').appendTo('.gameover');
     }
 
     setTimeout(function () {
@@ -100,6 +101,14 @@ $(function (){
                     updateStat('Correct', correct);
                     chars[i] = new Characters();
                     isWrong = false;
+
+                    //increase the speed by 1 and add 5 more in the total characters when correct increase by 10
+                    if(correct % 10 == 0) {
+                        increment++;
+                        for(var i = 0; i < 5; i++) {
+                            chars.push(new Characters());
+                        }
+                    }    
                 }
                 //do not use else here, it will update the wrong status up to 10 times
             });
