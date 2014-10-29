@@ -2,6 +2,7 @@ body {
 	background-color: #FBFBFB;
 	text-align: center;
 	font-family: 'Century Gothic';
+	letter-spacing: 1px; /*default: normal 0px;*/
 }
 /*it takes the 'full view' when you let it position = 0 and set back-ground color.
 The other elements are behind it.*/
@@ -32,6 +33,7 @@ h2 {
 }
 
 a {
+	font-size: 20px;
 	color: #27a577;
 	text-decoration: none;
 }
