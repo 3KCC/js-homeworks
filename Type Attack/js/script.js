@@ -9,7 +9,7 @@ $(function (){
     var correct = 0, wrong = 0, missed = 0; 
 
     var chars = [];
-    var increment = 100; //for increasing speed
+    var increment = 1; //for increasing speed
 
     // styling the drawing objects in canvas
     context.font = "40px Century Gothic";
