@@ -1,0 +1,200 @@
+/* line 33, ../sass/index.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 35, ../sass/index.scss */
+body {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  background: url(http://i.imgur.com/vRXJ21l.png), radial-gradient(#3a3b3f, #313236);
+}
+/* line 44, ../sass/index.scss */
+body:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: #a0a1b2;
+  font: 600 1.5em/2 verdana, sans-serif;
+  text-align: center;
+  text-shadow: 0 -2px #111;
+  content: 'Rock';
+}
+
+/* line 55, ../sass/index.scss */
+section {
+  align-self: center;
+  width: 15em;
+  transform: rotate(-90deg);
+  background: linear-gradient(-90deg, #222222 1px, #555555 1px, #555555 2px, rgba(0, 0, 0, 0) 2px) 7.5625em 0;
+  background-size: 1.75em 1px;
+  font: 1em/2 verdana, sans-serif;
+  text-align: center;
+}
+/* line 66, ../sass/index.scss */
+section:nth-of-type(1) {
+  height: 2em;
+}
+/* line 69, ../sass/index.scss */
+section:nth-of-type(1) input[type='range'] /deep/ #track:before {
+  content: 'Pre-Amp.';
+}
+/* line 73, ../sass/index.scss */
+section:nth-of-type(2) {
+  position: relative;
+  height: 20em;
+}
+/* line 77, ../sass/index.scss */
+section:nth-of-type(2):before {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 3em;
+  transform: translate(-50%, 50%) rotate(90deg) translate(-70%);
+  color: #676672;
+  font-size: .8em;
+  font-weight: 600;
+  line-height: 8.75;
+  text-align: right;
+  text-indent: -.25em;
+  text-shadow: 0 -1px #000;
+  content: '+12dB 0dB -12dB';
+}
+/* line 93, ../sass/index.scss */
+section:nth-of-type(2) input[type='range']:nth-of-type(1) /deep/ #track:before {
+  content: "32";
+}
+/* line 93, ../sass/index.scss */
+section:nth-of-type(2) input[type='range']:nth-of-type(2) /deep/ #track:before {
+  content: "64";
+}
+/* line 93, ../sass/index.scss */
+section:nth-of-type(2) input[type='range']:nth-of-type(3) /deep/ #track:before {
+  content: "125";
+}
+/* line 93, ../sass/index.scss */
+section:nth-of-type(2) input[type='range']:nth-of-type(4) /deep/ #track:before {
+  content: "250";
+}
+/* line 93, ../sass/index.scss */
+section:nth-of-type(2) input[type='range']:nth-of-type(5) /deep/ #track:before {
+  content: "500";
+}
+/* line 93, ../sass/index.scss */
+section:nth-of-type(2) input[type='range']:nth-of-type(6) /deep/ #track:before {
+  content: "1K";
+}
+/* line 93, ../sass/index.scss */
+section:nth-of-type(2) input[type='range']:nth-of-type(7) /deep/ #track:before {
+  content: "2K";
+}
+/* line 93, ../sass/index.scss */
+section:nth-of-type(2) input[type='range']:nth-of-type(8) /deep/ #track:before {
+  content: "4K";
+}
+/* line 93, ../sass/index.scss */
+section:nth-of-type(2) input[type='range']:nth-of-type(9) /deep/ #track:before {
+  content: "8K";
+}
+/* line 93, ../sass/index.scss */
+section:nth-of-type(2) input[type='range']:nth-of-type(10) /deep/ #track:before {
+  content: "16K";
+}
+
+/* line 100, ../sass/index.scss */
+input[type='range'] {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  padding: 0;
+  width: 14.5em;
+  height: 2em;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  /* slider components */
+}
+/* line 101, ../sass/index.scss */
+input[type='range'], input[type='range']::-webkit-slider-runnable-track, input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+/* line 118, ../sass/index.scss */
+input[type='range']::-webkit-slider-runnable-track {
+  border: none;
+  height: 0.5em;
+  border-radius: 0.25em;
+  box-shadow: inset -.125em .125em .125em #1c1c1c,  inset 1px -1px 1px #4a4a4a;
+  background: #23292f;
+}
+/* line 121, ../sass/index.scss */
+input[type='range']::-moz-range-track {
+  border: none;
+  height: 0.5em;
+  border-radius: 0.25em;
+  box-shadow: inset -.125em .125em .125em #1c1c1c,  inset 1px -1px 1px #4a4a4a;
+  background: #23292f;
+}
+/* line 124, ../sass/index.scss */
+input[type='range']::-ms-track {
+  border: none;
+  height: 0.5em;
+  border-radius: 0.25em;
+  box-shadow: inset -.125em .125em .125em #1c1c1c,  inset 1px -1px 1px #4a4a4a;
+  background: #23292f;
+  color: transparent;
+}
+/* line 128, ../sass/index.scss */
+input[type='range']::-ms-fill-lower, input[type='range']::-ms-fill-upper, input[type='range']::-ms-tooltip {
+  display: none;
+}
+/* line 134, ../sass/index.scss */
+input[type='range']::-webkit-slider-thumb {
+  margin-top: -0.5em;
+  border: none;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background: radial-gradient(at 80% 50%, #777777, rgba(119, 119, 119, 0) 70%) no-repeat 100% 50%, radial-gradient(at 50% 50%, #777777, rgba(119, 119, 119, 0) 70%) no-repeat -65% 90%, radial-gradient(rgba(255, 255, 255, 0) 32%, #ffffff 35%), linear-gradient(90deg, #f0984d, #bf7145) no-repeat 50% 50%;
+  background-size: 35% 65%, 65% 65%, 100% 100%, 65% 65%;
+}
+/* line 138, ../sass/index.scss */
+input[type='range']::-moz-range-thumb {
+  border: none;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background: radial-gradient(at 80% 50%, #777777, rgba(119, 119, 119, 0) 70%) no-repeat 100% 50%, radial-gradient(at 50% 50%, #777777, rgba(119, 119, 119, 0) 70%) no-repeat -65% 90%, radial-gradient(rgba(255, 255, 255, 0) 32%, #ffffff 35%), linear-gradient(90deg, #f0984d, #bf7145) no-repeat 50% 50%;
+  background-size: 35% 65%, 65% 65%, 100% 100%, 65% 65%;
+}
+/* line 141, ../sass/index.scss */
+input[type='range']::-ms-thumb {
+  border: none;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background: radial-gradient(at 80% 50%, #777777, rgba(119, 119, 119, 0) 70%) no-repeat 100% 50%, radial-gradient(at 50% 50%, #777777, rgba(119, 119, 119, 0) 70%) no-repeat -65% 90%, radial-gradient(rgba(255, 255, 255, 0) 32%, #ffffff 35%), linear-gradient(90deg, #f0984d, #bf7145) no-repeat 50% 50%;
+  background-size: 35% 65%, 65% 65%, 100% 100%, 65% 65%;
+}
+/* line 145, ../sass/index.scss */
+input[type='range'] /deep/ #track {
+  position: relative;
+}
+/* line 148, ../sass/index.scss */
+input[type='range'] /deep/ #track:before {
+  position: absolute;
+  top: -0.75em;
+  right: 100%;
+  transform: translate(50%) rotate(90deg) translate(0, 50%) scale(0.8);
+  color: #676672;
+  font-weight: 900;
+  text-shadow: 0 -1px #000;
+  white-space: nowrap;
+  font: 1em/2 verdana, sans-serif;
+}
+/* line 160, ../sass/index.scss */
+input[type='range']:focus {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
